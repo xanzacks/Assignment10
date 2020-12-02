@@ -34,7 +34,9 @@ public class P18_4 {
         public String toString(){
             return ("Largest element: " + getMeasure());
         }
+    }
 
+    public static class Mycompare<T>{
         public static <T extends Measurable> T max(ArrayList<T> arr) {
             T max = arr.get(0);
             for (int i = 0; i < arr.size(); i++) {
@@ -52,6 +54,6 @@ public class P18_4 {
         arr.add(new Double(4));
         arr.add(new Double(10.9));
         arr.add(new Double(7));
-        System.out.println(Double.max(arr));
+        System.out.println(Mycompare.max(arr));
     }
 }
